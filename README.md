@@ -1,25 +1,29 @@
+![trestlebridge farm landscape](./Trestlebridge.jpg)
+
 # Trestlebridge Farms
 
 You and your friends have decided to connect with the earth again and abandon your reliance on technology and urban vices. You have built a business plan, presented it to a bank, and have secured $5 million to purchase an abandoned farm and produce high quality, responsibly grown and raised meat, seed, eggs, feathers and compost.
 
-You have met with other growers and ranchers in the Middle Tennessee area and have decided to purchase the following starter stock. For each resource, you will find where it will be stored on the farm, what is produces when processed, and how much it produces.
+You have met with other growers and ranchers in the Middle Tennessee area and have decided on the animals and plants below to build your farm. For each resource, you will find where it will be stored on the farm, what is produces when processed, and how much it produces.
 
-#### Livestock
+## Livestock
 
-| Cows  | Pigs  | Chickens  | Ducks | Goats | Ostriches | Sheep |
-|---|---|---|---|---|--|--|
-|  Grazing Fields | Grazing Fields | Chicken House | Duck House | Grazing Fields | Grazing Fields | Grazing Fields |
-| Meat | Meat | Egg / Feather / Meat | Egg / Feather | Compost | Egg / Meat | Meat |
-| 18.25kg | 8.4kg | 7 / .5kg / 1.7kg | 6 / .75kg |  7.5kg | 3 / 2.6kg | 5kg |
+| | Cows  | Pigs  | Chickens  | Ducks | Goats | Ostriches | Sheep |
+|---|---|---|---|---|---|--|--|
+| **Location** |  Grazing Fields | Grazing Fields | Chicken House | Duck House | Grazing Fields | Grazing Fields | Grazing Fields |
+| **Product** | Meat | Meat | Egg / Feather / Meat | Egg / Feather | Compost | Egg / Meat | Meat |
+| **Amount** | 18.25kg | 8.4kg | 7 / .5kg / 1.7kg | 6 / .75kg |  7.5kg | 3 / 2.6kg | 5kg |
 
 
-#### Seed
+## Seed
 
-| Sunflower | Wildflower | Sesame |
-|--- |---|---|
-| Plowed or Natural Field | Natural Field  | Plowed Field |
-| Seed / Compost | Compost | Seed |
-| 150 / 2.6kg | 3.3kg | 40 |
+When you purchase seeds, you purchase enough for an entire row of plants in a field.
+
+| | Sunflower | Wildflower | Sesame |
+|---|---|---|---|
+|**Location**| Plowed or Natural Field | Natural Field  | Plowed Field |
+|**Product**| Seed / Compost | Compost | Seed |
+|**Amount**| 650 / 21.6kg | 30.3kg | 520 |
 
 ## Storage Facilities
 
@@ -27,16 +31,16 @@ Listed below are the capacities of each storage facility.
 
 | Plowed Field | Natural Field | Grazing Field | Chicken House | Duck House |
 |---|---|---|---|---|
-| 250 plants | 145 plants | 50 grazers | 78 | 42 |
+| 13 rows of plants | 10 rows of plants | 20 grazers | 15 | 12 |
 
 
 ## Processing Equipment
 
-Listed below is how many animals/plants can be processed by each kind of equipment.
+Listed below is how many animals/plants can be processed by each kind of equipment at one time.
 
 | Meat Processor | Seed Harvester | Composter | Feather Harvester | Egg Gatherer |
 |---|---|---|---|---|
-| 22 animals | 110 plants | 400 plants | 18 birds | 55 eggs |
+| 7 animals | 5 rows of plants | 8 rows of plants | 8 birds | 15 eggs |
 
 ## Farm Animals and Raw Materials System (FARMS)
 
@@ -101,17 +105,10 @@ Choose animals to purchase.
 > _
 ```
 
-When the user makes a choice, then immediately show another prompt asking for how many. If the user chose Ostrich, then she should see this.
+When the user enters in what to buy, then display all of the locations in which the animals can be stored. The current number of animals should be displayed for each location.
 
 ```sh
-How many Ostrich would you like to buy?
-> _
-```
-
-When she enters in how many to buy, then display all of the locations in which the animals can be stored. The current number of animals should be displayed for each location.
-
-```sh
-1. Grazing Field (21 animals)
+1. Grazing Field (16 animals)
 2. Grazing Field (4 animals)
 
 Where would you like to place the animals?
@@ -124,7 +121,7 @@ If the user chose to place them in a location that would be over capacity if the
 **** That facililty is not large enough ****
 ****     Please choose another one      ****
 
-1. Grazing Field (21 animals)
+1. Grazing Field (16 animals)
 2. Grazing Field (4 animals)
 
 Where would you like to place the animals?
@@ -154,9 +151,9 @@ How many Sunflower would you like to plant?
 When she enters in how many to plant, then display all of the locations in which the plants can be planted. The current number of plants should be displayed for each location.
 
 ```sh
-1. Plowed Field (40 plants)
-2. Plowed Field (210 plants)
-3. Natural Field (0 plants)
+1. Plowed Field (8 rows of plants)
+2. Plowed Field (5 rows of plants)
+3. Natural Field (0 rows of plants)
 
 Where would you like to plant the Sunflowers?
 > _
@@ -168,9 +165,9 @@ If the user chose to place them in a location that would be over capacity if the
 **** That facililty is not large enough ****
 ****     Please choose another one      ****
 
-1. Plowed Field (40 plants)
-2. Plowed Field (210 plants)
-3. Natural Field (0 plants)
+1. Plowed Field (8 rows of plants)
+2. Plowed Field (5 rows of plants)
+3. Natural Field (0 rows of plants)
 
 Where would you like to plant the Sunflowers?
 > _
@@ -187,8 +184,21 @@ Where would you like to plant the Sunflowers?
     1. Natural Field (65 sunflower, 30 wildflower)
     2. Plowed Field (60 sesame, 20 sunflower)
     ```
+2. Only show facilities that are able to store the number of animals/plants. For example, the user chooses to buy Wildflower seeds and one of the fields is already at capacity.
+    ```sh
+    1. Plowed Field (5 rows of plants)
+    2. Plowed Field (13 rows of plants)  <-- not a valid choice
+    3. Natural Field (0 plants)
+    ```
 
-## Processing Animals and Plants
+     Instead of showing all possible options, only show valid options.
+
+    ```sh
+    1. Plowed Field (5 rows of plants)
+    3. Natural Field (0 rows of plants)
+    ```
+
+### Processing Animals and Plants
 
 👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽
 
@@ -216,80 +226,120 @@ When the user selects a piece of equipment, then present her with the current fa
 For example, if she chose Meat Processor, the following should be presented.
 
 ```sh
-1. Grazing Field
+1. Grazing Field (20 animals)
+2. Chicken House (13 animals)
+3. Duck House (7 animals)
+
+Which facility has the animals you want to process?
+> _
 ```
 
-1. Choose which facility to be used
-1. Begin processing
-1. Then show only resources that can be used by that facility. Students
+Once the storage facility is chosen, then list the type of things in that facility.
 
-### Processing Amount Sub-Sub-Menu
+```sh
+The following animals are in the Grazing Field.
 
-1. Choose amount (adds that many items to a list of appropriate type)
-1. Choose another? (if yes, choose resource and choose amount again)
+1. 2 Ostrich
+2. 13 Cow
+3. 4 Pig
+4. 11 Goat
+5. 7 Sheep
 
-Create new instance of corresponding procesing facility immediately after choice. Instance has `public List<T>` of appropriate type. Invoke `.Process()` method on that instance and pass in the
+Which resource should be processed?
+> _
+```
 
-Compost bins (can process 200 pounds of raw material each)
-6. Create egg storage warehouse (can process 40 eggs each)
-7. Create a slaughterhouse (can process 10 animals of any type at a time)
-8. Create feather drying house (can process 10 birds at a time)
+Lastly, when the type is chosen, ask the user how many.
 
+```sh
+How many Sheep should be processed?
+> _
+```
 
-### Processing Option
+1. Verify that the equipment has the capacity to handle that many resources.
+1. If it can query the user if they are done, or want to add more animals.
 
-Slaughterhouse -> Any meat producing animal
-Process(List<IMeat> animals)
-* Ensure list count not greater than 10
-* Console.WriteLine how many pounds of meat was produced per animal
+```sh
+Ready to process? (Y/n)
+> _
+```
 
-Seed harvesting -> Any seed producing plant
-Harvest (List<ISeed> plants)
-* No more than 100 plants can be processed
- * Console.WriteLine how many seeds was produced per planet
+1. If user is done, remove _n_ of that type from the storage facility, and add _n_ to the equipment resource list.
+2. Output what the result of processing it. For example, if user chose to process 30 sunflowers and 15 sesame plants, the following output should appear.
+    ```sh
+    4500 Sunflower seeds were produced
+    600 Sesame seeds were produced
+    ```
+1. If the user is **not** done, take the user back to the menu showing storage facility options again.
+    ```sh
+    1. Grazing Field (20 animals)
+    2. Chicken House (13 animals)
+    3. Duck House (7 animals)
+
+    Which facility has the animals you want to process?
+    > _
+    ```
+
 
 ### Class Definition Notes
 
-Each plant class should have a property that decribes what final product after processing
+Each resource class should have a overloaded `Process()` methods for each kind of product that it can produce. For example, here's a sample `Chicken` class.
+
+Ref: [System.Guid.NewGuid()](https://docs.microsoft.com/en-us/dotnet/api/system.guid.newguid?redirectedfrom=MSDN&view=netframework-4.7.2#System_Guid_NewGuid)
+
 ```cs
-public string seedType { get; } = "Sesame";
-public int seedAmount { get; } = 15;
+public class Chicken
+{
+    // Fields
+    private Guid _id;
+
+
+    // Properties
+
+
+    // Constructor
+    public Chicken ()
+    {
+        _id = Guid.NewGuid();
+    }
+
+
+    // Methods
+    public double Process (MeatProcessor equipment)
+    {
+        return 1.7;
+    }
+
+    public double Process (EggGatherer equipment)
+    {
+        return 7;
+    }
+
+    public double Process (FeatherHarvester equipment)
+    {
+        return 0.5;
+    }
+
+    public override ToString ()
+    {
+        return $"Chicken {_id}. Bawk!";
+    }
+}
 ```
 
+## Farm Class
 
-Each animal class should have a property that decribes what final product after processing
+A helpful hint to get you started. You need a `Farm` class. This class will contain lists for each kind of facility that you want to assign animals or plants to.
+
 ```cs
-public string meatType { get; } = "Beef";
-public int meatAmount { get; } = 50;
+public class Farm
+{
+    public List<...> GrazingFields { get; } = new List<...>();
+
+    public void PurchaseGrazingLand ()
+    {
+        // Create new field and add to farm
+        GrazingFields.Append(...);
+    }
+}
 ```
-
-### Farm Class
-
-`public class Farm` needs to have `List<>` of all facilities except for slaughterhouse (see above).
-
-
-# Notes
-
-Meat producing (cow, pig, chicken, sheep, goat, duck)
-Fertilizer producing (cow, sheep, sunflower, wildflower)
-Egg producing (chicken, ostrich, duck)
-Feather producing (chicken, duck)
-Seed producing (sunflower, sesame)
-
-Process (IMeatProducer animal)
-Process (List<IMeatProducer> animals)
-
-CollectEggs (IEggProducer bird)
-CollectEggs (List<IEggProducer> birds)
-
-Defeather (IFeatherProducer bird)
-Defeather (List<IFeatherProducer> birds)
-
-Compost (IFertilizer resource)
-Compost (List<IFertilizer> resources)
-
-CollectSeed (ISeedProducer plant)
-CollectSeed (List<ISeedProducer> plant)
-
-
-
