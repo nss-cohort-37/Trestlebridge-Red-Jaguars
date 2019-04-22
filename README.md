@@ -146,7 +146,7 @@ Where would you like to place the animals?
 
 ### Seed Purchase Menu
 
-If the user chooses 3 from the main menu, then she should see the following menu, with the plants listed in alphabetical order.
+If the user chooses 3 from the main menu, then she should see the following menu, with the plants listed in alphabetical order. You purchase enough seeds for an entire row at a time.
 
 ```sh
 1. Sesame
@@ -157,14 +157,7 @@ Choose seed to purchase.
 > _
 ```
 
-When the user makes a choice, then immediately show another prompt asking for how many. If the user chose Sunflower, then she should see this.
-
-```sh
-How many Sunflower would you like to plant?
-> _
-```
-
-When she enters in how many to plant, then display all of the locations in which the plants can be planted. The current number of plants should be displayed for each location.
+When the user makes a choice, then display all of the locations in which the plants can be planted. The current number of plant rows should be displayed for each location.
 
 ```sh
 1. Plowed Field (8 rows of plants)
