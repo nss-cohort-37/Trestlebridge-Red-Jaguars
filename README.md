@@ -1,5 +1,21 @@
 ![trestlebridge farm landscape](./Trestlebridge.jpg)
 
+# Before You Start
+
+You are inheriting a code base. You cannot start from scratch and build your own, because you will almost never get that opportunity on the job. You must read the current code with your teammates and try to understand what it is doing. Then you must refactor it - even if it means deleting some of the code that currently exists - to build the rest of the features.
+
+The goal of this group project, likely more than any other one, is to *learn*. Focusing on productivity is something you will need to worry about on the job. Have fun with this code, make lots of mistakes, refactor them, and learn about what you can do with C#.
+
+This will be a large challenge. How will you respond to it? Attack it with excitement, or withdraw from it in defeat? Time to see how far you have come with working on your Growth Mindset.
+
+## Guidelines
+
+* You will not learn anything in this group project if you don't communicate well with each other.
+* You will not get anything done if you don't communicate well with each other.
+* Collaboration is key in this project. Working solo will get you nowhere.
+* Showing up late, extended lunches, going home early and leaving your team stranded will get you pulled off the team.
+* Create [pull request and issue ticket templates](https://help.github.com/en/articles/about-issue-and-pull-request-templates) for your team.
+
 # Trestlebridge Farms
 
 You and your friends have decided to connect with the earth again and abandon your reliance on technology and urban vices. You have built a business plan, presented it to a bank, and have secured $5 million to purchase an abandoned farm and produce high quality, responsibly grown and raised meat, seed, eggs, feathers and compost.
