@@ -20,16 +20,14 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (IGrazing animal)
         {
-            if (_animals.Count < _capacity) {
-                _animals.Add(animal);
-            }
+            // TODO: implement this...
+            throw new NotImplementedException();
         }
 
-        public void AddResource (List<IGrazing> animals)  // TODO: Take out this method for boilerplate
+        public void AddResource (List<IGrazing> animals) 
         {
-            if (_animals.Count + animals.Count <= _capacity) {
-                _animals.AddRange(animals);
-            }
+            // TODO: implement this...
+            throw new NotImplementedException();
         }
 
         public override string ToString()

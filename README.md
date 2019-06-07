@@ -27,6 +27,7 @@ You have met with other growers and ranchers in the Middle Tennessee area and ha
 | | Cows  | Pigs  | Chickens  | Ducks | Goats | Ostriches | Sheep |
 |---|---|---|---|---|---|--|--|
 | **Location** |  Grazing Fields | Grazing Fields | Chicken House | Duck House | Grazing Fields | Grazing Fields | Grazing Fields |
+| **Feed per day** | 5.4kg | 3.2kg | 0.9kg | 0.8 kg | 4.1kg | 2.3kg | 4kg |
 | **Product** | Meat | Meat | Egg / Feather / Meat | Egg / Feather | Compost | Egg / Meat | Meat |
 | **Amount** | 18.25kg | 8.4kg | 7 / .5kg / 1.7kg | 6 / .75kg |  7.5kg | 3 / 2.6kg | 5kg |
 
@@ -47,7 +48,7 @@ Listed below are the capacities of each storage facility.
 
 | Plowed Field | Natural Field | Grazing Field | Chicken House | Duck House |
 |---|---|---|---|---|
-| 13 rows of plants | 10 rows of plants | 20 grazers | 15 | 12 |
+| 13 rows of plants <br/> 5 plants per row | 10 rows of plants <br/> 6 plants per row | 20 grazers | 15 | 12 |
 
 
 ## Processing Equipment
