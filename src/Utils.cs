@@ -26,7 +26,10 @@ namespace Trestlebridge
                 }
                 catch (Exception)
                 {
-                    Enumerable.Range(1, 100).ToList().ForEach(Console.WriteLine);
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Console.WriteLine();
+                    }
                 }
             }
         }
