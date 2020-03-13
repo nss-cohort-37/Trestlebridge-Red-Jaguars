@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals {
-    public class Chicken : IResource, IGrazing, IMeatProducing {
+    public class Chicken : IResource, IMeatProducing, IEggProducing, IFeatherProducing, IGrazing {
 
         private Guid _id = Guid.NewGuid();
         private double _meatProduced = 7;

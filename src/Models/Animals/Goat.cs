@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals {
-    public class Goat : IResource, IGrazing{
+    public class Goat : IResource, IGrazing, ICompostProducing{
 
         private Guid _id = Guid.NewGuid();
         private double _compostProduced = 7.5;
