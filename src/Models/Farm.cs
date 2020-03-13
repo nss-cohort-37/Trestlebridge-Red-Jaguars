@@ -6,14 +6,18 @@ using Trestlebridge.Models.Facilities;
 
 namespace Trestlebridge.Models {
     public class Farm {
-        public List<GrazingField> GrazingFields { get; } = new List<GrazingField> ();
 
+        public List<GrazingField> GrazingFields { get; } = new List<GrazingField> ();
+        // foreach (string value in GrazingFields) {
+        //     Console.WriteLine (value);
+        // }
         /*
             This method must specify the correct product interface of the
             resource being purchased.
          */
         public void PurchaseResource<T> (IResource resource, int index) {
             Console.WriteLine (typeof (T).ToString ());
+
             switch (typeof (T).ToString ()) {
                 case "Cow":
                     GrazingFields[index].AddResource ((IGrazing) resource);
@@ -23,11 +27,7 @@ namespace Trestlebridge.Models {
             }
         }
 
-        public void AddGrazingField (GrazingField field) {
-
-            GrazingFields.Add (field);
-
-        }
+        public void AddGrazingField (GrazingField field) => GrazingFields.Add (field);
 
         public override string ToString () {
             StringBuilder report = new StringBuilder ();
