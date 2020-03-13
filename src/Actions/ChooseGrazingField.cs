@@ -22,6 +22,8 @@ namespace Trestlebridge.Actions
             // How can I output the type of animal chosen here?
             Console.WriteLine($"Place the animal where?");
 
+            
+
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
