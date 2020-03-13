@@ -22,6 +22,9 @@ namespace Trestlebridge.Actions {
             switch (Int32.Parse (input)) {
                 case 1:
                     farm.AddGrazingField (new GrazingField ());
+                    // foreach (var g in farm.GrazingFields) {
+                    //     Console.WriteLine (g);
+                    // }
                     Console.WriteLine ("Congratulations, new grazing field created!!!");
                     Thread.Sleep (TimeSpan.FromSeconds (2.5));
                     break;
