@@ -51,13 +51,6 @@ namespace Trestlebridge
           DisplayBanner();
           PurchaseStock.CollectInput(Trestlebridge);
         }
-        else if (option == "3")
-        {
-          Console.WriteLine("Select a seed");
-          Console.WriteLine("1: Sesame");
-          Console.WriteLine("2: Sunflower");
-          Console.WriteLine("3: Wildflower");
-        }
         else if (option == "4")
         {
           DisplayBanner();
@@ -75,6 +68,7 @@ namespace Trestlebridge
         {
           Console.WriteLine($"Invalid option: {option}");
         }
+
       }
     }
   }
