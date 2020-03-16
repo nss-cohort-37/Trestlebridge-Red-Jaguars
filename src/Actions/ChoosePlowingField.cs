@@ -13,10 +13,10 @@ namespace Trestlebridge.Actions
     {
       Utils.Clear();
 
-      for (int i = 0; i < farm.PlowingFields.Count; i++)
+      for (int i = 0; i < farm.PlowedFields.Count; i++)
       {
         Console.WriteLine($"{i + 1}. Plowing Field");
-        Console.WriteLine($"\t This field has {farm.PlowingFields[i].PlantCount()} plants\n");
+        Console.WriteLine($"\t This field has {farm.PlowedFields[i].PlantCount()} plants currently!\n");
       }
 
       {
@@ -30,7 +30,7 @@ namespace Trestlebridge.Actions
       Console.Write("> ");
       int choice = Int32.Parse(Console.ReadLine());
 
-      farm.PlowingFields[choice - 1].AddResource(plant);
+      farm.PlowedFields[choice - 1].AddResource(plant);
 
       /*
           Couldn't get this to work. Can you?

@@ -32,16 +32,16 @@ namespace Trestlebridge.Actions
           Console.WriteLine("Congratulations, new grazing field created!!!");
           Thread.Sleep(TimeSpan.FromSeconds(2.5));
           break;
-        // case 2:
-        //     farm.AddPlowedField (new PlowedField ());
-        //     Console.WriteLine ("Congratulations, new plowed field created!!!");
-        //     Thread.Sleep (TimeSpan.FromSeconds (2.5));
-        //     break;
-        // case 3:
-        //     farm.AddNaturalField (new NaturalField ());
-        //     Console.WriteLine ("Congratulations, new natural field created!!!");
-        //     Thread.Sleep (TimeSpan.FromSeconds (2.5));
-        //     break;
+        case 2:
+          farm.AddPlowedField(new PlowedField());
+          Console.WriteLine("Congratulations, new plowed field created!!!");
+          Thread.Sleep(TimeSpan.FromSeconds(2.5));
+          break;
+        case 3:
+          farm.AddNaturalField(new NaturalField());
+          Console.WriteLine("Congratulations, new natural field created!!!");
+          Thread.Sleep(TimeSpan.FromSeconds(2.5));
+          break;
         case 4:
           farm.AddChickenHouse(new ChickenHouse());
           Console.WriteLine("Congratulations, new chicken house created!!!");
