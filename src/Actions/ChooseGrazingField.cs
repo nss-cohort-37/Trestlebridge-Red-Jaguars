@@ -3,6 +3,7 @@ using System.Linq;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models;
 using Trestlebridge.Models.Animals;
+using Trestlebridge.Models.Facilities;
 
 namespace Trestlebridge.Actions
 {
@@ -15,6 +16,10 @@ namespace Trestlebridge.Actions
       for (int i = 0; i < farm.GrazingFields.Count; i++)
       {
         Console.WriteLine($"{i + 1}. Grazing Field");
+        Console.WriteLine($"\t This field has {farm.GrazingFields[i].AnimalCount()} animals currently!\n");
+      }
+
+      {
       }
 
       Console.WriteLine();
