@@ -6,10 +6,14 @@ using Trestlebridge.Models.Facilities;
 
 namespace Trestlebridge.Models
 {
+
+
   public class Farm
   {
 
     public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
+    public List<DuckHouse> DuckHouse { get; } = new List<DuckHouse>();
+    public List<ChickenHouse> ChickenHouse { get; } = new List<ChickenHouse>();
     // foreach (string value in GrazingFields) {
     //     Console.WriteLine (value);
     // }
@@ -26,75 +30,36 @@ namespace Trestlebridge.Models
         case "Cow":
           GrazingFields[index].AddResource((IGrazing)resource);
           break;
+        case "Duck":
+          DuckHouse[index].AddResource((IDucks)resource);
+          break;
+        case "Chicken":
+          ChickenHouse[index].AddResource((IChicken)resource);
+          break;
         default:
           break;
 
-
-      }
-    public class Farm
-    {
-
-      public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
-      public List<DuckHouse> DuckHouse { get; } = new List<DuckHouse>();
-      public List<ChickenHouse> ChickenHouse { get; } = new List<ChickenHouse>();
-      // foreach (string value in GrazingFields) {
-      //     Console.WriteLine (value);
-      // }
-      /*
-          This method must specify the correct product interface of the
-          resource being purchased.
-       */
-      public void PurchaseResource<T>(IResource resource, int index)
-      {
-        Console.WriteLine(typeof(T).ToString());
-
-        switch (typeof(T).ToString())
-        {
-          case "Cow":
-            GrazingFields[index].AddResource((IGrazing)resource);
-            break;
-          case "Duck":
-            DuckHouse[index].AddResource((IDucks)resource);
-            break;
-          default:
-            break;
-
-        }
-      }
-
-      public void AddGrazingField(GrazingField field) => GrazingFields.Add(field);
-
-      public void AddDuckHouse(DuckHouse field) => DuckHouse.Add(field);
-
-      public override string ToString()
-      {
-        StringBuilder report = new StringBuilder();
-
-        GrazingFields.ForEach(gf => report.Append(gf));
-        DuckHouse.ForEach(dh => report.Append(dh));
-
-        return report.ToString();
       }
     }
 
     public void AddGrazingField(GrazingField field) => GrazingFields.Add(field);
+
+    public void AddDuckHouse(DuckHouse field) => DuckHouse.Add(field);
+
+    public void AddChickenHouse(ChickenHouse field) => ChickenHouse.Add(field);
 
     public override string ToString()
     {
       StringBuilder report = new StringBuilder();
 
       GrazingFields.ForEach(gf => report.Append(gf));
+      DuckHouse.ForEach(dh => report.Append(dh));
       ChickenHouse.ForEach(ch => report.Append(ch));
 
       return report.ToString();
     }
-    public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
-
-
-
-
-    public void AddChickenHouse(ChickenHouse house) => ChickenHouse.Add(house);
-
-
   }
+
+
+
 }

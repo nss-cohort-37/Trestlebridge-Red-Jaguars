@@ -6,12 +6,12 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Models.Facilities
 {
-  public class ChickenHouse : IFacility<Chicken>
+  public class ChickenHouse : IFacility<IChicken>
   {
     private int _capacity = 15;
     private Guid _id = Guid.NewGuid();
 
-    private List<Chicken> _animals = new List<Chicken>();
+    private List<IChicken> _animals = new List<IChicken>();
 
 
 
@@ -23,7 +23,7 @@ namespace Trestlebridge.Models.Facilities
       }
     }
 
-    public void AddResource(Chicken animal)
+    public void AddResource(IChicken animal)
     {
 
       try
@@ -36,7 +36,7 @@ namespace Trestlebridge.Models.Facilities
       }
     }
 
-    public void AddResource(List<Chicken> animals)
+    public void AddResource(List<IChicken> animals)
     {
       // TODO: implement this...
       throw new NotImplementedException();
