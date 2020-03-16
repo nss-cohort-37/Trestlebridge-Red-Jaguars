@@ -9,14 +9,14 @@ namespace Trestlebridge.Actions
 {
   public class ChooseNaturalField
   {
-    public static void CollectInput(Farm farm, IPlowing plant)
+    public static void CollectInput(Farm farm, INatural plant)
     {
       Utils.Clear();
 
       for (int i = 0; i < farm.NaturalFields.Count; i++)
       {
         Console.WriteLine($"{i + 1}. Natural Field");
-        Console.WriteLine($"\t This field has {farm.NaturalFields[i].PlantCount()} plants\n");
+        Console.WriteLine($"\t This field has {farm.NaturalFields[i].PlantCount()} plants currently!\n");
       }
 
       {
