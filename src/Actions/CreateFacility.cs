@@ -42,11 +42,11 @@ namespace Trestlebridge.Actions
         //     Console.WriteLine ("Congratulations, new natural field created!!!");
         //     Thread.Sleep (TimeSpan.FromSeconds (2.5));
         //     break;
-        // case 4:
-        //     farm.AddChickenHouse (new ChickenHouse ());
-        //     Console.WriteLine ("Congratulations, new chicken house created!!!");
-        //     Thread.Sleep (TimeSpan.FromSeconds (2.5));
-        //     break;
+        case 4:
+          farm.AddChickenHouse(new ChickenHouse());
+          Console.WriteLine("Congratulations, new chicken house created!!!");
+          Thread.Sleep(TimeSpan.FromSeconds(2.5));
+          break;
         // case 5:
         //     farm.AddDuckHouse (new DuckHouse ());
         //     Console.WriteLine ("Congratulations, new duck house created!!!");
