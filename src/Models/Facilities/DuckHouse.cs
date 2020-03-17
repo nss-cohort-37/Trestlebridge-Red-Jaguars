@@ -7,7 +7,7 @@ namespace Trestlebridge.Models.Facilities
 {
     public class DuckHouse : IFacility<IDucks>
     {
-        private int _capacity = 50;
+        private int _capacity = 12;
         private Guid _id = Guid.NewGuid ();
 
         private List<IDucks> _animals = new List<IDucks> ();
