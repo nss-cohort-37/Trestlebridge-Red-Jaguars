@@ -1,8 +1,8 @@
 namespace Trestlebridge.Interfaces
 {
-    public interface IPlowing
-    {
-        double SeedsPerDay { get; set; }
-        void Plowing();
-    }
+  public interface IPlowing
+  {
+    int SeedsProduced { get; set; }
+    double Harvest();
+  }
 }
