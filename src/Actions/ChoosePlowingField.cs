@@ -15,7 +15,7 @@ namespace Trestlebridge.Actions
 
       for (int i = 0; i < farm.PlowedFields.Count; i++)
       {
-        if(farm.NaturalFields[i].PlantCount() < farm.NaturalFields.Capacity)
+        if(farm.NaturalFields[i].PlantCount() < 13)
         {
         Console.WriteLine($"{i + 1}. Plowing Field");
         Console.WriteLine($"\t This field has {farm.PlowedFields[i].PlantCount()} plants currently!\n");
