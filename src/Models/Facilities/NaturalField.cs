@@ -11,17 +11,17 @@ namespace Trestlebridge.Models.Facilities
     private int _plantsPerRow = 6;
     private Guid _id = Guid.NewGuid();
 
-    private List<INatural> PlantsProduced = new List<INatural>();
+    private List<INatural> _plants = new List<INatural>();
     public int PlantCount()
     {
-      return PlantsProduced.Count;
+      return _plants.Count;
     }
 
     public double Capacity
     {
       get
       {
-        return _rows * _plantsPerRow;
+        return _rows;
       }
     }
 
@@ -30,7 +30,7 @@ namespace Trestlebridge.Models.Facilities
 
       try
       {
-        PlantsProduced.Add(plant);
+        _plants.Add(plant);
       }
       catch
       {
@@ -49,8 +49,8 @@ namespace Trestlebridge.Models.Facilities
       StringBuilder output = new StringBuilder();
       string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-      output.Append($"Natural field {shortId} has {this.PlantsProduced.Count} plants\n");
-      this.PlantsProduced.ForEach(a => output.Append($"   {a}\n"));
+      output.Append($"Natural field {shortId} has {this._plants.Count} plants\n");
+      this._plants.ForEach(a => output.Append($"   {a}\n"));
 
       return output.ToString();
     }

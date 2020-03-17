@@ -15,7 +15,7 @@ namespace Trestlebridge.Actions
 
       for (int i = 0; i < farm.GrazingFields.Count; i++)
       {
-        if (farm.GrazingFields[i].AnimalCount () < 20)
+        if (farm.GrazingFields[i].AnimalCount () < farm.GrazingFields[i].Capacity)
         {
           Console.WriteLine ($"{i + 1}. Grazing Field");
           Console.WriteLine ($"\t This field has {farm.GrazingFields[i].AnimalCount()} animals currently!\n");

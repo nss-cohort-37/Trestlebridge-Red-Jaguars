@@ -19,15 +19,20 @@ namespace Trestlebridge.Actions
 
       for (int i = 0; i < farm.NaturalFields.Count; i++)
       {
+        if (farm.NaturalFields[i].PlantCount() < farm.NaturalFields[i].Capacity) 
+        {
         Console.WriteLine($"{i + 1}. Natural Field");
         Console.WriteLine($"\t This field has {farm.NaturalFields[i].PlantCount()} plants currently!\n");
+        }
       }
       for (int i = farm.NaturalFields.Count; i < farm.PlowedFields.Count + farm.NaturalFields.Count; i++)
       {
-        Console.WriteLine($"{i + 1}. Plowed Field");
         var plowedFieldIndex = i - farm.NaturalFields.Count;
+        if (farm.PlowedFields[plowedFieldIndex].PlantCount() < farm.PlowedFields[plowedFieldIndex].Capacity) 
+        {
+        Console.WriteLine($"{i + 1}. Plowed Field");
         Console.WriteLine($"\t This field has {farm.PlowedFields[plowedFieldIndex].PlantCount()} plants currently!\n");
-
+        }
       }
 
 
