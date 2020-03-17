@@ -19,6 +19,31 @@ namespace Trestlebridge.Actions
         {
           Console.WriteLine ($"{i + 1}. Grazing Field");
           Console.WriteLine ($"\t This field has {farm.GrazingFields[i].AnimalCount()} animals currently!\n");
+          var CowCount = 0;
+          CowCount = farm.GrazingFields[i].AnimalList ()
+            .Where (animalType => animalType.Type == "Cow")
+            .Count ();
+          Console.WriteLine ($"\t \t There are {CowCount} Cows!");
+          var GoatCount = 0;
+          GoatCount = farm.GrazingFields[i].AnimalList ()
+            .Where (animalType => animalType.Type == "Goat")
+            .Count ();
+          Console.WriteLine ($"\t \t There are {GoatCount} Goats!");
+          var PigCount = 0;
+          PigCount = farm.GrazingFields[i].AnimalList ()
+            .Where (animalType => animalType.Type == "Pig")
+            .Count ();
+          Console.WriteLine ($"\t \t There are {PigCount} Pigs!");
+          var SheepCount = 0;
+          SheepCount = farm.GrazingFields[i].AnimalList ()
+            .Where (animalType => animalType.Type == "Sheep")
+            .Count ();
+          Console.WriteLine ($"\t \t There are {SheepCount} Sheep!");
+          var OstrichCount = 0;
+          OstrichCount = farm.GrazingFields[i].AnimalList ()
+            .Where (animalType => animalType.Type == "Ostrich")
+            .Count ();
+          Console.WriteLine ($"\t \t There are {OstrichCount} Ostriches!");
         }
       }
 
