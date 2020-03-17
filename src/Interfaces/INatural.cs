@@ -1,9 +1,10 @@
 namespace Trestlebridge.Interfaces
 {
-  public interface INatural
-  {
+    public interface INatural
+    {
 
-    double Compost();
-    double CompostProduced { get; set; }
-  }
+        double Compost();
+        double CompostProduced { get; set; }
+        string Type { get; }
+    }
 }
